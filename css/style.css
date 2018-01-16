@@ -8,22 +8,43 @@ body {
   background-color: #bfbfbf;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 main {
-  background-color: #000d1a;
   display: flex;
   flex-direction: row;
-  width: 400px;
-  justify-content: center;
+  width: 350px;
+  margin: 0 auto;
   margin-top: 50px;
   border-radius: 20px;
+  justify-content: center;
+  border: 2px 2px 2px 0px solid white;
+}
+
+#Spelregels {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  width: 400px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#myNumber {
+  width: 40px;
+}
+
+#startbtn {
+  width: 50px;
 }
 
 #secenddis {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   padding: 10px;
+  width: 240px;
 }
 
 #secret {
@@ -41,12 +62,7 @@ main {
   margin: 5px;
 }
 
-.displaysection {
-  display: flex;
-  flex-direction: row;
-}
-
-.displaysection div {
+.bolekes {
   background-color: white;
   width: 50px;
   height: 50px;
@@ -55,7 +71,13 @@ main {
 }
 
 #invoer {
-  margin-top: 70px;
+  margin-top: 30px;
+  padding-top: 10px;
+  border-top: 2px solid white;
+  width: 350px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
 }
 
  #invoer div {
@@ -100,7 +122,7 @@ main {
   flex-direction: row;
 }
 
-.result div div {
+.result {
   height: 15px;
   width: 15px;
   border-radius: 50%;
@@ -108,8 +130,15 @@ main {
   margin: 3px;
 }
 
-.result {
+.nakijkrows {
+  width: 50px;
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 18px;
+}
+
+#nakijkrow_1 {
+  margin-top: 15px;
 }
 
 #nailedit {
