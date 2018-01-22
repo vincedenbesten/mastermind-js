@@ -1,4 +1,10 @@
 var rows = 12;
+var gues = [];
+var addrow = 12;
+var addcolumn = 1;
+var colors = ['red','blue','yellow','pink','green','orange'];
+var answer =[colors[Math.floor(Math.random()*6)],colors[Math.floor(Math.random()*6)],colors[Math.floor(Math.random()*6)],colors[Math.floor(Math.random()*6)]];
+console.log(answer);
 
 function start() {
 	rows = document.getElementById("myNumber").value;
@@ -29,12 +35,9 @@ function start() {
 	}
 }
 
-var gues = [];
-var addrow = 12;
-var addcolumn = 1;
 
 if (addcolumn == 4) {
-	
+
 }
 
 function addcolor(kleur) {
