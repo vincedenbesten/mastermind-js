@@ -1,9 +1,9 @@
 var rows = 12;
 var gues = [];
-var addrow = 12;
 var addcolumn = 1;
 var colors = ['red','blue','yellow','pink','green','orange'];
 var answer =[colors[Math.floor(Math.random()*6)],colors[Math.floor(Math.random()*6)],colors[Math.floor(Math.random()*6)],colors[Math.floor(Math.random()*6)]];
+var checkrow = 1;
 console.log(answer);
 
 function start() {
@@ -35,39 +35,47 @@ function start() {
 	}
 }
 
+function checkgues() {
+	console.log("test");
+	if (gues[0,1,2,3] == answer[0,1,2,3]) {
+		alert("win!");
+	}else {
+	for (var check = 0; check < 4; check++) {
+		for(var i = 0; i< 4;i++){
+			if(gues[check] == answer[i])
+			document.getElementById('row_' + rows + 'bolletje_'+(check +1)).style.backgroundColor = "navy";
 
-if (addcolumn == 4) {
+		}
+		if (gues[check] == answer[check]) {
+			document.getElementById('row_' + rows + 'bolletje_'+(check +1)).style.backgroundColor = "Black";
+		}
 
+	}
 }
-
+}
 function addcolor(kleur) {
 	gues.push(kleur)
-	document.getElementById("row_" + addrow + "column_" + addcolumn).style.backgroundColor = kleur;
+	document.getElementById("row_" + rows + "column_" + addcolumn).style.backgroundColor = kleur;
+	console.log(gues);
 	if (addcolumn == 4) {
-		addrow --;
+		checkgues();
+		rows --;
 		addcolumn = 1;
+		guescopy = gues;
+		gues = [];
+		console.log(gues);
+		console.log(guescopy);
 	}else {
 		addcolumn ++;
 	}
-	console.log(gues);
-}
-
-/*function check(gues, answer) {
-	if (gues.lengt < answer.length) {
-		return false;
-	}
 }
 
 
-var answercopy = []
+/*
 
 for (var i = 0; i < answer.length; i++) {
 	answercopy[i] = answer[i];
 }
-
-
-var checked = [];
-
 
 for (var i = 0; i < gues.length; i++) {
 	if (answer[i] == gues[i]) {
