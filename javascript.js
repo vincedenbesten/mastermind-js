@@ -2,6 +2,9 @@ var rows = 12;
 
 function start() {
 	rows = document.getElementById("myNumber").value;
+	document.getElementById("Spelregels").style.display = "none";
+
+
 	for(c =1; c <= rows ; c++) {
 		var div = document.createElement("div");
 		div.id = "nakijkrow_" + c;
@@ -26,18 +29,27 @@ function start() {
 	}
 }
 
+var gues = [];
+var addrow = 12;
+var addcolumn = 1;
 
-
-/*var r = 0;
-var c = 0;
-function addcolor(kleur) {
-
-  getElementById()
+if (addcolumn == 4) {
+	
 }
 
+function addcolor(kleur) {
+	gues.push(kleur)
+	document.getElementById("row_" + addrow + "column_" + addcolumn).style.backgroundColor = kleur;
+	if (addcolumn == 4) {
+		addrow --;
+		addcolumn = 1;
+	}else {
+		addcolumn ++;
+	}
+	console.log(gues);
+}
 
-
-function check(gues, answer) {
+/*function check(gues, answer) {
 	if (gues.lengt < answer.length) {
 		return false;
 	}

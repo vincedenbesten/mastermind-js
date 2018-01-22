@@ -13,7 +13,7 @@
       <p>Spelregels.........</p>
       <h2>settings</h2>
       <h3>aantal rijen:</h3>
-      <input type="number" id="myNumber" value="12">
+      <input type="number" id="myNumber" value="12" min="8" max="100">
       <button type="button" name="button" id="startbtn" onclick="start()">START</button>
     </section>
 
@@ -43,15 +43,15 @@
       <secction id="invoer">
         <div onclick="addcolor('red')" id="red">
         </div>
-        <div onclick="blue" id="blue">
+        <div onclick="addcolor('blue')" id="blue">
         </div>
-        <div onclick="yellow" id="yellow">
+        <div onclick="addcolor('yellow')" id="yellow">
         </div>
-        <div onclick="green" id="green">
+        <div onclick="addcolor('green')" id="green">
         </div>
-        <div onclick="orange" id="orange">
+        <div onclick="addcolor('orange')" id="orange">
         </div>
-        <div onclick="pink" id="pink">
+        <div onclick="addcolor('pink')" id="pink">
         </div>
       </section>
       <script src="javascript.js"></script>
